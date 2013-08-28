@@ -27,7 +27,7 @@ public class SalariedEmployee extends Employee {
     
     public double weeklyPay(){
         double weeklyPay;
-        weeklyPay=annualSalary/52;
+        weeklyPay=(annualSalary/52);
         return weeklyPay;
     }
 }
