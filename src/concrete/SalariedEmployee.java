@@ -7,10 +7,14 @@ package concrete;
 
 public class SalariedEmployee extends Employee {
     
-    private int annualSalary;
+    /**
+     *
+     */
+    protected int annualSalary;
 
-    public SalariedEmployee() {
+    public SalariedEmployee(int annualSalary) {
         super();
+        this.annualSalary=annualSalary;
     }
 
     public int getAnnualSalary() {
@@ -21,5 +25,9 @@ public class SalariedEmployee extends Employee {
         this.annualSalary = annualSalary;
     }
     
-    
+    public double weeklyPay(){
+        double weeklyPay;
+        weeklyPay=annualSalary/52;
+        return weeklyPay;
+    }
 }

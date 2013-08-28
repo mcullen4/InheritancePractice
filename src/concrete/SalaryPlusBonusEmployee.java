@@ -9,8 +9,10 @@ public class SalaryPlusBonusEmployee extends SalariedEmployee {
     
     private int bonus;
 
-    public SalaryPlusBonusEmployee() {
-        super();
+
+    public SalaryPlusBonusEmployee(int annualSalary, int bonus) {
+        super(annualSalary);
+        this.bonus=bonus;
     }
 
     public int getBonus() {
@@ -21,5 +23,11 @@ public class SalaryPlusBonusEmployee extends SalariedEmployee {
         this.bonus = bonus;
     }
     
+    @Override
+     public double weeklyPay(){
+        double weeklyPay;
+        weeklyPay=(annualSalary+bonus)/52;
+        return weeklyPay;
+    }
     
 }

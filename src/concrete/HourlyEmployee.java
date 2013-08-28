@@ -8,9 +8,13 @@ package concrete;
 public class HourlyEmployee extends Employee {
     
     private double hourlyWage;
+    private double hoursWorked;
 
-    public HourlyEmployee() {
+    public HourlyEmployee(double hoursWorked, double hourlyWage) {
         super();
+        this.hoursWorked=hoursWorked;
+        this.hourlyWage=hourlyWage;
+        
     }
 
     public double getHourlyWage() {
@@ -21,5 +25,14 @@ public class HourlyEmployee extends Employee {
         this.hourlyWage = hourlyWage;
     }
     
-    
+    public double weeklyPay(){
+        double weeklyPay;
+        if (hoursWorked<=40){
+        weeklyPay = hourlyWage*hoursWorked;
+        }
+        else{
+        weeklyPay = (hourlyWage*40)+((hourlyWage*1.5)*(hoursWorked-40));
+        }
+    return weeklyPay;
+    }
 }
