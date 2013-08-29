@@ -1,7 +1,4 @@
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package abstract1;
 
 
@@ -25,7 +22,7 @@ public class SalariedEmployee extends Employee {
     @Override
     public double weeklyPay() {
      double weeklyPay;
-        weeklyPay=(annualSalary/52);
+        weeklyPay=(annualSalary/52.0);
         return weeklyPay;   
     }
 }

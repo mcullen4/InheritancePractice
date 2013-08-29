@@ -1,16 +1,9 @@
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
-package concrete;
+
+package interface1;
 
 
 public class SalariedEmployee extends Employee {
-    
-    /**
-     *
-     */
-    protected int annualSalary;
+   protected int annualSalary;
 
     public SalariedEmployee(int annualSalary) {
         super();
@@ -25,9 +18,10 @@ public class SalariedEmployee extends Employee {
         this.annualSalary = annualSalary;
     }
     
+   @Override
     public double weeklyPay(){
         double weeklyPay;
         weeklyPay=(annualSalary/52.0);
         return weeklyPay;
-    }
+    }  
 }

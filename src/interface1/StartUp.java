@@ -1,5 +1,8 @@
-
-package abstract1;
+/*
+ * To change this template, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package interface1;
 
 import java.util.Scanner;
 
@@ -13,15 +16,12 @@ public class StartUp {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        
-        
         int idNumber;
         String input;
         String fName;
         String lName;
         String dept;
         int typeEmployee;
-        
         Scanner keyboard = new Scanner (System.in);
         
         System.out.println("Enter Employee ID Number");
@@ -51,9 +51,10 @@ public class StartUp {
             hrWage=keyboard.nextDouble();
             System.out.println("How many hours worked this week?");
             hours=keyboard.nextDouble();
-            HourlyEmployee e1 = new HourlyEmployee(lName,fName,dept,idNumber);
-            e1.setHourlyWage(hrWage);
-            e1.setHoursWorked(hours);
+            HourlyEmployee e1 = new HourlyEmployee(hours,hrWage);
+            e1.setEmployeeNumber(idNumber);
+            e1.setFirstName(fName);
+            e1.setLastName(lName);
             System.out.println("The weekly pay for "+ e1.getFirstName() + " "
                     + e1.getLastName()+" is "+ e1.weeklyPay()+".");
         }
@@ -61,8 +62,10 @@ public class StartUp {
             int yrSalary;
             System.out.println("What is the annual salary?");
             yrSalary=keyboard.nextInt();
-            SalariedEmployee e1 = new SalariedEmployee(lName,fName,dept,idNumber);
-            e1.setAnnualSalary(yrSalary);
+            SalariedEmployee e1 = new SalariedEmployee(yrSalary);
+            e1.setEmployeeNumber(idNumber);
+            e1.setFirstName(fName);
+            e1.setLastName(lName);
             System.out.println("The weekly pay for "+ e1.getFirstName() + " "
                     + e1.getLastName()+" is "+ e1.weeklyPay()+".");
         }
@@ -73,10 +76,10 @@ public class StartUp {
             yrSalary=keyboard.nextInt();
             System.out.println("What is the annual bonus?");
             bonus=keyboard.nextInt();
-            SalaryPlusBonusEmployee e1 = new SalaryPlusBonusEmployee(lName,fName
-                    ,dept,idNumber);
-            e1.setAnnualSalary(yrSalary);
-            e1.setBonus(bonus);
+            SalaryPlusBonusEmployee e1 = new SalaryPlusBonusEmployee(yrSalary,bonus);
+            e1.setEmployeeNumber(idNumber);
+            e1.setFirstName(fName);
+            e1.setLastName(lName);
             System.out.println("The weekly pay for "+ e1.getFirstName() + " "
                     + e1.getLastName()+" is "+ e1.weeklyPay()+".");
         }
@@ -84,5 +87,5 @@ public class StartUp {
         
         
        
-    } 
     }
+}

@@ -1,7 +1,4 @@
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package abstract1;
 
 /**
@@ -9,6 +6,7 @@ package abstract1;
  * @author Michele
  */
 public abstract class Employee {
+    
     private String lastName;
     private String firstName;
     private String department;
@@ -16,6 +14,7 @@ public abstract class Employee {
     
     
     public Employee(String lName, String fName,String dept,int ID){
+        
     lastName=lName;
     firstName=fName;
     department=dept;
@@ -55,7 +54,6 @@ public abstract class Employee {
         this.employeeID = employeeID;
     }
     
-    
-    
+       
     public abstract double weeklyPay();
 }

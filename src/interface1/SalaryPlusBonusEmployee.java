@@ -2,12 +2,11 @@
  * To change this template, choose Tools | Templates
  * and open the template in the editor.
  */
-package concrete;
+package interface1;
 
 
 public class SalaryPlusBonusEmployee extends SalariedEmployee {
-    
-    private int bonus;
+   private int bonus;
 
 
     public SalaryPlusBonusEmployee(int annualSalary, int bonus) {
@@ -28,6 +27,5 @@ public class SalaryPlusBonusEmployee extends SalariedEmployee {
         double weeklyPay;
         weeklyPay=(annualSalary+bonus)/52.0;
         return weeklyPay;
-    }
-    
+    } 
 }
