@@ -9,6 +9,6 @@ package interface1;
  * @author Michele
  */
 public interface EmployeeInterface {
-    public final double OVERTIMERATE=1.5;
+    public final double OVERTIME_RATE=1.5;
     public double weeklyPay();
 }

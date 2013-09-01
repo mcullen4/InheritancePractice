@@ -22,7 +22,7 @@ public class SalaryPlusBonusEmployee extends SalariedEmployee {
     @Override
     public double weeklyPay() {
      double weeklyPay;
-        weeklyPay=(annualSalary+bonus)/52.0;
+        weeklyPay=(getAnnualSalary()+bonus)/52.0;
         return weeklyPay;   
     }
 }

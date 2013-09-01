@@ -4,7 +4,7 @@ package abstract1;
 
 public class SalariedEmployee extends Employee {
 
-    protected int annualSalary;
+    private int annualSalary;
 
     public SalariedEmployee(String lName, String fName, String dept, int ID) {
         super(lName, fName, dept, ID);

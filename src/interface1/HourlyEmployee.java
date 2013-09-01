@@ -31,7 +31,7 @@ public class HourlyEmployee extends Employee {
         weeklyPay = hourlyWage*hoursWorked;
         }
         else{
-        weeklyPay = (hourlyWage*40)+((hourlyWage*OVERTIMERATE)*(hoursWorked-40));
+        weeklyPay = (hourlyWage*40)+((hourlyWage*OVERTIME_RATE)*(hoursWorked-40));
         }
     return weeklyPay;
     }  
